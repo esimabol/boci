@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin:0 auto;
+}
+
+.header {
+    background-color: #666;
+    color: #fff;    
+}
+
+.header .container, 
+.colores{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.colores {    
+    width: 450px;
+    border: 1px dotted white;
+}
+.box {
+    flex-basis: 41px;
+    height: 40px;
+    border:1px solid black;
+    flex-grow: 1;
+}
+
+
+.box::after {
+    content: ' ';
+}
+
+/*COLORES*/
+#black{
+    background-color: black;
+}
+#gray{
+    background-color: gray;
+}
+#darkred{
+    background-color: darkred;
+}
+#red{
+    background-color: red;
+}
+#orange{
+    background-color: orange;
+}
+#yellow{
+    background-color: yellow;
+}
+#green{
+    background-color: green;
+}
+#turquoise{
+    background-color: turquoise;
+}
+#indigo{
+    background-color: indigo;
+}
+#purple{
+    background-color: purple;
+}
+#white{
+    background-color: white;
+}
+#ligth_gray{
+    background-color: lightgray;
+}
+#brown{
+    background-color: brown;
+}
+#mistyrose{
+    background-color: mistyrose;
+}
+#gold{
+    background-color: gold;
+}
+#lightyellow{
+    background-color: lightyellow;
+}
+#lime{
+    background-color: lime;
+}
+#paleturquoise{
+    background-color: paleturquoise;
+}
+#lightblue{
+    background-color: lightblue;
+}
+#lavender{
+    background-color: lavender;
+}
+/* .left {
+    text-align: left;
+} */
+
+/* .color-pallete > div, .thickness > div {
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    border:1px dashed #fff;
+}
+
+.color-pallete, .thickness {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: stretch;
+}
+
+
+main {
+    text-align: center;
+}
+*/
+#drawing_area {
+    border: 1px solid black; 
+   
+}
+
+
