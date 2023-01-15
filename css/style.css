@@ -8,12 +8,15 @@ html {
     font-size: 16px;
 }
 
-
-.container {
-    max-width: 1200px;
-    margin:0 auto;
+body {
+    background-color: rgb(197, 197, 197);
+    height: 100vh;
+    position: relative;   
 }
 
+img {
+    height: 55px;
+}
 .header {
     background-color: #666;
     color: #fff;    
@@ -25,19 +28,23 @@ html {
     flex-flow: row wrap;
     justify-content: space-evenly;
     align-items: center;
+    
 }
 
 .colores {    
-    width: 450px;
-    border: 1px dotted white;
+    width: 350px;
+
 }
 .box {
-    flex-basis: 41px;
-    height: 40px;
-    border:1px solid black;
+    cursor: pointer;
+    flex-basis: 25px;
+    height: 25px;
+    border: .5px solid #625e5e;
+    border-radius: 50%;
     flex-grow: 1;
+    margin:1%;
+    
 }
-
 
 .box::after {
     content: ' ';
@@ -104,35 +111,85 @@ html {
 #lavender{
     background-color: lavender;
 }
-/* .left {
-    text-align: left;
-} */
 
-/* .color-pallete > div, .thickness > div {
-    width: 30px;
-    height: 30px;
-    border-radius: 10px;
-    border:1px dashed #fff;
-}
-
-.color-pallete, .thickness {
-    width: 70px;
-    height: 70px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-content: stretch;
-}
-
-
-main {
+main .container {    
     text-align: center;
-}
-*/
-#drawing_area {
-    border: 1px solid black; 
    
 }
 
+#drawing_area {     
 
+    background-color: #fff;   
+}
+
+#mouse_selector,
+#keyboard_selector {
+    position: absolute;
+    visibility: hidden;
+    
+}
+
+.tools{
+    width:170px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;  
+    flex-direction: column;   
+    justify-content: space-around;
+    align-items: center;
+    overflow-x: hidden;
+    transition: 0.5s;
+    background-color: rgb(222, 222, 222);
+    
+
+}
+
+.tools figure{
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 50%;
+    padding-top:8px;
+    cursor: pointer;
+   
+}
+
+.tools figcaption {
+    text-align: center;
+}
+
+.tools figure:hover:not(.active) {
+    border: 1px solid black;
+    background-color: #fff; 	
+    /*	rgb(80, 200, 120)*/
+    color:#555;
+}
+
+.active {
+    background-color: rgb(152, 251, 152);
+
+}
+
+#colores {
+    width: 60px;
+    height: 60px;
+    border:none;
+    cursor: pointer;
+}
+
+.closebtn {
+    text-decoration: none;
+    color: #333;
+    position: absolute;
+    top: 0;
+    right: 15px;
+    font-size: 36px;
+    margin-left: 50px; 
+}
+
+#open {
+    cursor: pointer;
+}
+/* color:#555; */

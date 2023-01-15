@@ -11,7 +11,7 @@
 <body>
     <header class="header">
         <div class="container">
-            <div class="title">
+            <div class="title">                 
                 <h1>BOCI</h1>
             </div>
             <nav class="colores">              
@@ -35,14 +35,18 @@
                     <div class="box" id="paleturquoise"></div>
                     <div class="box" id="lightblue"></div>
                     <div class="box" id="lavender"></div>                                     
-            </nav>
-            <section class="tools">
-                Seccion de herramientas
-            </section>
+            </nav>          
+            <input type="color" name="paleta-colores" id="colores">
+            <img src="img/ajustes.png" alt="" id="open">  
+            <!-- <label class="switch">
+                <input type="checkbox" id="mouse">
+                <span class="slider">Mouse</span>
+            </label> -->
         </div>       
+        
           
             <!-- <section class="color-pallete">
-                <input type="color" name="paleta-colores" id="colores">
+                
             </section>
             <section>
                 <label class="switch">
@@ -50,10 +54,7 @@
                     <span class="slider">Teclado</span>
                 </label>                
                 
-                <label class="switch">
-                    <input type="checkbox" id="mouse">
-                    <span class="slider">Mouse</span>
-                </label>
+                
 
                 <label class="switch">
                     <input type="checkbox" id="borrador">
@@ -64,19 +65,58 @@
                     <input type="button" value="Borrar todo" id="borrarTodo">                    
                 </label>
 
-                <input type="range" id="grosor" step="0.1" min="1" max="9">
                   
             </section> -->
-        </div>
+        
     </header>
+    <section class="tools" id="tools">   
+        <a href="javascript:void(0)" class="closebtn">&times;</a>
+        <label for="mouse_selector">                   
+            <figure id="mouse-icon-container">           
+                <input type="checkbox" name="mouse_selector" id="mouse_selector">           
+                <img src="img/mouse.png" width="70" height="70" alt="" id="mouse">                     
+                <figcaption>
+                    <small><p>Mouse</p></small>
+                </figcaption>
+            </figure>
+        </label>
+        <label for="keyboard_selector">  
+            <figure id="keyboard-icon-container">
+                <input type="checkbox" name="keyboard_selector" id="keyboard_selector">                
+                <img src="img/arrows.png" width="70" height="70" alt="" id="teclado">
+                <figcaption>
+                    <small><p>Keyboard</p></small>
+                </figcaption>
+            </figure>
+        </label>
+        <figure>
+            <img src="img/eraser.png" width="70" height="70" alt="">
+            <figcaption>
+                <small><p>Eraser</p></small>
+            </figcaption>
+        </figure>
+        
+        <figure>
+            <img src="img/bomb.png" width="70" height="70" alt=""> 
+            <figcaption>
+                <small><p>Clear All</p></small>
+            </figcaption>
+        </figure>       
+        <label for="">Max
+            <input type="range" id="grosor" step="0.1" min="1" max="9"> 
+        </label> 
+                
+    </section>
     <main class="canvas">
-        <canvas width ="500"  height ="500" id="drawing_area"></canvas>
-    </main>
-    <footer>
+        <div class="container">
+            <canvas width ="500"  height ="500" id="drawing_area"></canvas>
+        </div>       
+    </main>   
+    <!-- <footer>
         <div class="container">
             <p><small>Developed by Edylber Simancas &copy; 2021</small></p>
         </div>
-    </footer>
+    </footer> -->
     
 </body>
 </html>
