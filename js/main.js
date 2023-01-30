@@ -122,8 +122,8 @@ const startingPoint = () => {
 
     //DECLARACIONES GENERALES
     let canvas = document.getElementById('drawing_area');
-        canvas.width = window.width;
-        canvas.height = window.height;
+        // canvas.width = window.width;
+        // canvas.height = window.height;
 
     let context = canvas.getContext('2d');  
  
