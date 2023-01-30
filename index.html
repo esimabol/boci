@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>Boci: Expresa tus Ideas</title>
     <script src="js/main.js"></script>
@@ -11,64 +14,67 @@
 <body>
     <header class="header">
         <div class="container">
-            <div class="title">                 
+            <a href="index.html" class="container_logo">
+                <img src="img/logo.png" class="logo" alt="logo de boci">            
                 <h1>BOCI</h1>
-            </div>
-            <nav class="colores">              
-                    <div class="box" id="black"></div>
-                    <div class="box" id="gray"></div>
-                    <div class="box" id="darkred"></div>
-                    <div class="box" id="red"></div>
-                    <div class="box" id="orange"></div>
-                    <div class="box" id="yellow"></div>
-                    <div class="box" id="green"></div>
-                    <div class="box" id="turquoise"></div>
-                    <div class="box" id="indigo"></div>
-                    <div class="box" id="purple"></div>
-                    <div class="box" id="white"></div>
-                    <div class="box" id="ligth_gray"></div>
-                    <div class="box" id="brown"></div>
-                    <div class="box" id="mistyrose"></div>
-                    <div class="box" id="gold"></div>
-                    <div class="box" id="lightyellow"></div>
-                    <div class="box" id="lime"></div>
-                    <div class="box" id="paleturquoise"></div>
-                    <div class="box" id="lightblue"></div>
-                    <div class="box" id="lavender"></div>                                     
-            </nav>          
-            <input type="color" name="paleta-colores" id="colores">
-            <img src="img/ajustes.png" alt="" id="open">  
-            <!-- <label class="switch">
-                <input type="checkbox" id="mouse">
-                <span class="slider">Mouse</span>
-            </label> -->
-        </div>       
-        
+            </a>        
+               
+             
           
-            <!-- <section class="color-pallete">
-                
-            </section>
-            <section>
-                <label class="switch">
-                    <input type="checkbox" id="teclado">
-                    <span class="slider">Teclado</span>
-                </label>                
-                
-                
-
-                <label class="switch">
-                    <input type="checkbox" id="borrador">
-                    <span class="slider">Borrador</span>
-                </label>
-
-                <label class="switch">
-                    <input type="button" value="Borrar todo" id="borrarTodo">                    
-                </label>
-
-                  
-            </section> -->
-        
+            <div class="options">
+                <img class="option" src="img/ajustes.png" alt="" id="open">               
+                <img class="option" src="img/signature.png" alt="" id="signature">
+                <div class="estilos"></div>                        
+            </div>            
+        </div>            
     </header>
+    <!-- <nav class="nav">
+        <ul>
+            <li>          
+                <div class="options">
+                    <img src="img/lapiz.png"  class="icons" alt="pencil icon image">
+                    <img src="img/up.png" alt="pencil menu expand" class="expand_icon">
+                    <div class="dropdown-content">
+                        <section class="dropdown_content_tools">
+                            <img src="img/lapiz.png"  class="icons" alt="pencil icon image">
+                            <img src="img/eraser.png"  class="icons" alt="eraser icon image">
+                        </section>
+                        <section class="dropdown_content_colors">                           
+                            <div class="box" id="black"></div>                   
+                            <div class="box" id="gray"></div>
+                            <div class="box" id="darkred"></div>
+                            <div class="box" id="red"></div>
+                            <div class="box" id="orange"></div>
+                            <div class="box" id="yellow"></div>
+                            <div class="box" id="green"></div>
+                            <div class="box" id="turquoise"></div>
+                            <div class="box" id="indigo"></div>
+                            <div class="box" id="purple"></div>
+                            <div class="box" id="white"></div>
+                            <div class="box" id="ligth_gray"></div>
+                            <div class="box" id="brown"></div>
+                            <div class="box" id="mistyrose"></div>
+                            <div class="box" id="gold"></div>
+                            <div class="box" id="lightyellow"></div>
+                            <div class="box" id="lime"></div>
+                            <div class="box" id="paleturquoise"></div>
+                            <div class="box" id="lightblue"></div>
+                            <div class="box" id="lavender"></div>  
+                        </section>                        
+                        <section class="dropdown_content_lines">
+                            <img src="img/thin.png"  class="icons" alt="thin line icon image">
+                            <img src="img/thick.png"  class="icons" alt="thin line icon image">
+                            <img src="img/gross.png"  class="icons" alt="gross line icon image">
+                        </section>
+                        <section class="dropdown_content_pallete_colors">
+                            <input type="color" name="paleta-colores" id="colores">
+                        </section>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </nav> -->
+    
     <section class="tools" id="tools">   
         <a href="javascript:void(0)" class="closebtn">&times;</a>
         <label for="mouse_selector">                   
@@ -89,15 +95,18 @@
                 </figcaption>
             </figure>
         </label>
-        <figure>
-            <img src="img/eraser.png" width="70" height="70" alt="">
-            <figcaption>
-                <small><p>Eraser</p></small>
-            </figcaption>
-        </figure>
+        <label for="borrador">
+            <figure id="eraser-icon-container">
+                <input type="checkbox" id="borrador">
+                <img src="img/eraser.png" width="70" height="70" alt="">
+                <figcaption>
+                    <small><p>Eraser</p></small>
+                </figcaption>
+            </figure>
+        </label>
         
-        <figure>
-            <img src="img/bomb.png" width="70" height="70" alt=""> 
+        <figure id="borrarTodo">
+            <img src="img/clear_canvas.png" width="70" height="70" alt=""> 
             <figcaption>
                 <small><p>Clear All</p></small>
             </figcaption>
@@ -107,16 +116,14 @@
         </label> 
                 
     </section>
-    <main class="canvas">
+         
+        
+    <footer>
         <div class="container">
-            <canvas width ="500"  height ="500" id="drawing_area"></canvas>
-        </div>       
-    </main>   
-    <!-- <footer>
-        <div class="container">
-            <p><small>Developed by Edylber Simancas &copy; 2021</small></p>
+            <p><small>Desrrolado con <span class="heart">&hearts;</span> por Edylber Simancas &copy; 2021</small></p>
         </div>
-    </footer> -->
-    
+    </footer>
+     
+     <canvas id="drawing_area"></canvas>
 </body>
 </html>
