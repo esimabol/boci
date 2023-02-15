@@ -9,27 +9,40 @@
     <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>Boci: Expresa tus Ideas</title>
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer></script>
 </head>
 <body>
     <header class="header">
-        <div class="container">
-            <a href="index.html" class="container_logo">
-                <img src="img/logo.png" class="logo" alt="logo de boci">            
-                <h1>BOCI</h1>
-            </a>        
-               
-             
-          
+        <div class="container">                           
+            <h1>BOCI</h1>
+            <section class="colores">                           
+                <div class="box" id="black"></div>                   
+                <div class="box" id="gray"></div>
+                <div class="box" id="darkred"></div>
+                <div class="box" id="red"></div>
+                <div class="box" id="orange"></div>
+                <div class="box" id="yellow"></div>
+                <div class="box" id="green"></div>
+                <div class="box" id="turquoise"></div>
+                <div class="box" id="indigo"></div>
+                <div class="box" id="purple"></div>
+                <div class="box" id="white"></div>
+                <div class="box" id="ligth_gray"></div>
+                <div class="box" id="brown"></div>
+                <div class="box" id="mistyrose"></div>
+                <div class="box" id="gold"></div>
+                <div class="box" id="lightyellow"></div>
+                <div class="box" id="lime"></div>
+                <div class="box" id="paleturquoise"></div>
+                <div class="box" id="lightblue"></div>
+                <div class="box" id="lavender"></div>  
+            </section>
+            <input type="color" name="paleta-colores" id="colores">         
             <div class="options">
-                <img class="option" src="img/ajustes.png" alt="" id="open">               
-                <img class="option" src="img/signature.png" alt="" id="signature">
-                <div class="estilos"></div>                        
+                <svg viewBox="0 0 24 24" id="open"><path d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z"></path></svg>                                                      
             </div>            
         </div>            
     </header>
-   
-    
     <section class="tools" id="tools">   
         <a href="javascript:void(0)" class="closebtn">&times;</a>
         <label for="mouse_selector">                   
@@ -37,7 +50,7 @@
                 <input type="checkbox" name="mouse_selector" id="mouse_selector">           
                 <img src="img/mouse.png" width="70" height="70" alt="" id="mouse">                     
                 <figcaption>
-                    <small><p>Mouse</p></small>
+                    <small><p class="caption">Mouse</p></small>
                 </figcaption>
             </figure>
         </label>
@@ -46,7 +59,7 @@
                 <input type="checkbox" name="keyboard_selector" id="keyboard_selector">                
                 <img src="img/arrows.png" width="70" height="70" alt="" id="teclado">
                 <figcaption>
-                    <small><p>Keyboard</p></small>
+                    <small><p class="caption">Keyboard</p></small>
                 </figcaption>
             </figure>
         </label>
@@ -55,23 +68,26 @@
                 <input type="checkbox" id="borrador">
                 <img src="img/eraser.png" width="70" height="70" alt="">
                 <figcaption>
-                    <small><p>Eraser</p></small>
+                    <small><p class="caption">Eraser</p></small>
                 </figcaption>
             </figure>
         </label>
         
         <figure id="borrarTodo">
-            <img src="img/clear_canvas.png" width="70" height="70" alt=""> 
+            <img src="img/clear.png" width="70" height="70" alt=""> 
             <figcaption>
-                <small><p>Clear All</p></small>
+                <small><p class="caption">Clear All</p></small>
             </figcaption>
         </figure>       
-        <label for="">Max
+        <label for="">
+            <img src="img/cepillo.png" width="70" height="70">
             <input type="range" id="grosor" step="0.1" min="1" max="9"> 
         </label>                 
-    </section>     
-     <canvas width="700" height="500" id="drawing_area"></canvas>
-     <footer>
+    </section>
+    <div class="container">
+        <canvas width="300" id="drawing_area">Your browser does not support javascript</canvas>
+    </div>     
+     <footer class="footer">
         <div class="container">
             <p><small>Desrrolado con <span class="heart">&hearts;</span> por Edylber Simancas &copy; 2021</small></p>
         </div>
